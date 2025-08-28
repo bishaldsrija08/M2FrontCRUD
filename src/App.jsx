@@ -1,9 +1,16 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import ButtonComponent from "./ButtonComponent"
 const App = () => {
   return (
     <>
-      <div className="thisIsDiv">
-        <h1 className="Hello">Hello</h1>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<h1>Hello</h1>} />
+          <Route path="/about" element={<h1>About</h1>}/>
+        </Routes>
+      </BrowserRouter>
+      <ButtonComponent />
+      <ButtonComponent />
     </>
   )
 }
