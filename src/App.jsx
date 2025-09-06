@@ -3,18 +3,19 @@ import { RouterProvider } from "react-router-dom"
 import ButtonComponent from "./ButtonComponent"
 import router from "./Routes"
 import { useState } from "react"
+import UseEffect from "./UseEffect"
 const App = () => {
-const [count, setCount] = useState(0)
-const incCount = ()=>{
-  setCount(count+1)
-}
+  const [count, setCount] = useState(0)
+  const incCount = () => {
+    setCount(count + 1)
+  }
 
-const decCount =()=>{
-  setCount(count-1)
-}
+  const decCount = () => {
+    setCount(count - 1)
+  }
 
-const use = useState()
-console.log(use[0], use[1])
+  const use = useState()
+  // console.log(use[0], use[1])
   return (
     <>
       <RouterProvider router={router} />
@@ -29,6 +30,7 @@ console.log(use[0], use[1])
       <h1>{count}</h1>
       <button onClick={incCount}>Change +</button>
       <button onClick={decCount}>Change -</button>
+      <UseEffect/>
     </>
   )
 }
